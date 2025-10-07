@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Nunito Sans', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0b2545;
+  transition: color 180ms ease-in-out;
+}
+
+.navbar-brand img { height: 25px; }
+
+a, .nav-link {
+  color: inherit;
+  transition: color 180ms ease-in-out, text-decoration-color 180ms ease-in-out;
+  text-decoration: none;
+}
+
+a:hover, .nav-link:hover {
+  color: #b87333;
+  text-decoration: underline dotted currentColor;
+  text-decoration-thickness: 1px;
+}
+
+.navbar .nav-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.navbar-brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .navbar .nav-link { font-size: 1rem; }
+  .navbar-brand { font-size: 1rem; }
+}
+
+.hero {
+  position: relative;
+  background-image: url('../assets/img/hero-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero .container { position: relative; z-index: 1; }
+
+@media (max-width: 576px){
+  .hero { min-height: 45vh; padding: 3rem 0; margin-bottom: 2rem; }
+  .hero h1 { font-size: 1.6rem; }
+}
+
+.products .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.products .card-img-top {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+.products .card-body {
+  flex: 1;
+}
+
